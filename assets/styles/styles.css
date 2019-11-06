@@ -1,0 +1,26 @@
+img {
+  height: 100px !important;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: none;
+  background: #feeae9 !important;
+}
+body,
+.title,
+.content {
+  color: #2955f4 !important;
+  background: none;
+}
+/* text styles */
+a {
+  color: #2955f4 !important;
+}
+/* color styles */
+.pink {
+  background: #fa7065 !important;
+}
+.rose {
+  background: #feeae9 !important;
+}
