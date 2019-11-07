@@ -21,3 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+//This is the classic copy paste jquery free js for bulma hamburger menus

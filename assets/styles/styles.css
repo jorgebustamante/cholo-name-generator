@@ -1,17 +1,37 @@
 img {
-  height: 100px !important;
+  height: 200px;
 }
+#image {
+  height: 200px;
+}
+#spacer{
+  height: 200px;
+}
+@media only screen and (max-width: 600px) {
+  #spacer {
+    height: 30px;
+  }
+  .hero-body{
+    padding: 1rem !important;
+  }
+}
+
 html,
 body {
-  height: 100%;
-  overflow-x: none;
+  height: 100% !important;
+  overflow-x: hidden;
   background: #feeae9 !important;
+  font-family: Andale Mono, monospace ;
 }
 body,
 .title,
 .content {
   color: #2955f4 !important;
   background: none;
+  font-family: Andale Mono, monospace !important;
+}
+.footer {
+  bottom: 0 !important;
 }
 /* text styles */
 a {
@@ -21,6 +41,18 @@ a {
 .pink {
   background: #fa7065 !important;
 }
+.pinkText {
+  color: #fa7065 !important;
+}
 .rose {
   background: #feeae9 !important;
+}
+.roseText {
+  color: #feeae9;
+}
+
+.border-shadow {
+  box-shadow: -2px 2px 0 -1px #fa7065, -2px 2px 0 0 #000 !important;
+  border-color: black !important;
+  border-width: 1px !important;
 }

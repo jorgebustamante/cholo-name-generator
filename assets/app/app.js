@@ -208,50 +208,41 @@ window.onload = function() {
     'Sleepy'
   ];
 
-  const femaleImgs = ['1.jpg', '2.jpg'];
-  const maleImgs = ['1.jpg', '2.jpg'];
-  const resName = document.getElementById('resName');
-  const image = document.getElementById('image');
-  // function getRandomImage(imgArr, gender) {
-  //   let path = `../images/${gender}`; // default path here
-  //   var num = Math.floor(Math.random() * imgArr.length);
-  //   var img = imgArr[num];
-  //   var imgStr = '<img src="' + path + img + '" alt = "">';
-  //   return imgStr;
-  // }
+  const Imgs = ['1.jpg', '2.jpg']; //array representing images in public folder, male and female img folder must have same numebr of jpgs for this to not bug
+  const resName = document.getElementById('resName'); //div for choloname
+  const image = document.getElementById('image'); //image container div
 
-  const femaleRand = (femaleArr, femaleImgs) => {
+  const femaleRand = (femaleArr, Imgs) => {
     //return object with random chola img and name
     return {
       CholaName: femaleArr[Math.floor(Math.random() * femaleArr.length)],
-      CholaImg: femaleImgs[Math.floor(Math.random() * femaleImgs.length)]
+      CholaImg: Imgs[Math.floor(Math.random() * Imgs.length)]
     };
   };
 
-  const maleRand = (maleArr, maleImgs) => {
+  const maleRand = (maleArr, Imgs) => {
     //return object with random cholo img and name
-    let obj = {
+    return {
       CholoName: maleArr[Math.floor(Math.random() * maleArr.length)],
-      CholoImg: maleImgs[Math.floor(Math.random() * maleImgs.length)]
+      CholoImg: Imgs[Math.floor(Math.random() * Imgs.length)]
     };
-    return obj;
   };
 
   //////Cholo name call
   document.getElementById('male').onclick = function() {
-    var oddEven = Math.floor(Math.random() * Math.floor(2));
+    let oddEven = Math.floor(Math.random() * Math.floor(2));
     let obj;
     let gender;
+    // oddEven coin flip that decides if it spawns male or female result, i was going to let users pick by gender but wanted to make the ui more inclusive
     oddEven === 0
-      ? ((obj = femaleRand(femaleArr, femaleImgs)), (gender = 'female'))
-      : ((obj = maleRand(maleArr, maleImgs)), (gender = 'male'));
-    console.log(oddEven);
-    let name = obj[Object.keys(obj)[0]];
-    let img = obj[Object.keys(obj)[1]];
-    let path = `assets/images/${gender}/${img}`;
-    let imgStr = '<img src="' + path + '" alt = "cholo">';
-    image.innerHTML = imgStr;
-
-    resName.innerHTML = name;
+      ? ((obj = femaleRand(femaleArr, Imgs)), (gender = 'female'))
+      : ((obj = maleRand(maleArr, Imgs)), (gender = 'male'));
+    console.log(oddEven); //0 represents chola result 1 represents cholo result
+    let name = obj[Object.keys(obj)[0]]; //first object key from the rand functions, the name
+    let img = obj[Object.keys(obj)[1]]; // second object key from the rand functions, the img array element
+    let path = `assets/images/${gender}/${img}`; //this path uses template literals and conditionally changes based on male or female result via the gender variable
+    let imgStr = '<img src="' + path + '" alt = "cholo">'; //create html element with the path defined as above
+    image.innerHTML = imgStr; //insert html img element to image container
+    resName.innerHTML = name; //insert choloname
   };
 };

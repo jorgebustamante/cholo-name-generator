@@ -7,28 +7,18 @@
     <title>Cholo Name Generator</title>
     <script src="assets/app/app.js"></script>
     <script src="assets/app/burger.js"></script>
-
     <link
       rel="shortcut icon"
       href="assets/images/female/1.jpg"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
     <!-- Bulma Version 0.8.x-->
-    <link rel="stylesheet" type="text/css" href="assets/styles/styles.css" />
-
     <link
       rel="stylesheet"
       href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css"
-    />
+    <link rel="stylesheet" type="text/css" href="assets/styles/styles.css" />
+    
   </head>
   <body>
     <section class="hero is-medium is-bold">
@@ -60,28 +50,36 @@
       </div>
       <div class="hero-body">
         <div class="container has-text-centered">
-          <div class="content">
-            <h4 class="title">Click button for cholo name</h4>
-            <p></p>
-            <button class="button is-rounded pink" id="male">
-              <a href="#"><h4 class="is-4 title">Generate</h4></a>
-            </button>
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <h4 class="title is-4">Click button for cholo name</h4>
+                <p></p>
+                <button class="button is-rounded pink border-shadow" id="male">
+                  <h4 class="is-4 title">Generate</h4>
+                </button>
+              </div>
+            </div>
+            <div class="column">
+              <div class="results"><h4 class="is-4 title" id="resName"></h4></div>
+              <div id="image"></div>
+            </div>
           </div>
-          <div class="results"><p id="resName"></p></div>
-          <div id="image"></div>
         </div>
       </div>
     </section>
 
-    <section class="container"></section>
-    <footer class="footer rose">
+    <footer class="footer pink">
       <div class="columns">
-        <div class="column">
-          
+        <div class="column has-text-centered">
+          <p class="roseText">paulie made tthis with lots of love</p>
+          <p class="roseText">
+            If you want me to get off foodstamps-- consider
+            <a href="https://www.linkedin.com/in/paulie-rodriguez/"
+              >giving me a job refferal</a
+            >
+          </p>
         </div>
-        <div class="column">
-          
-          </div>
       </div>
     </footer>
   </body>
