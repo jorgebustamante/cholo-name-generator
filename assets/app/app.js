@@ -208,7 +208,7 @@ window.onload = function() {
     'Sleepy'
   ];
 
-  const Imgs = ['1.jpg', '2.jpg']; //array representing images in public folder, male and female img folder must have same numebr of jpgs for this to not bug
+  const Imgs = ['1.jpg', '2.jpg', '3.jpg']; //array representing images in public folder, male and female img folder must have same numebr of jpgs for this to not bug
   const resName = document.getElementById('resName'); //div for choloname
   const image = document.getElementById('image'); //image container div
 
