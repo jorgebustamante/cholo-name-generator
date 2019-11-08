@@ -217,7 +217,9 @@ window.onload = function() {
     '6.jpg',
     '7.jpg',
     '8.jpg',
-    '9.jpg'
+    '9.jpg',
+    '10.jpg',
+    '11.jpg'
   ];
    //array representing images in public folder, male and female img folder must have same numebr of jpgs for this to not bug
   const resName = document.getElementById('resName'); //div for choloname
